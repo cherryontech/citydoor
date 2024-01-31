@@ -1,9 +1,10 @@
 import Nav from './nav'
+import Heading from './components/heading'
 
 export default function Home() {
   return (
     <div>
-      <Nav></Nav>
+      <Heading level={"bg"} className={"somethingElse"}>hello</Heading>
     </div>
   )
 }
