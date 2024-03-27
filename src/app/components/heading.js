@@ -9,14 +9,14 @@ const validateLevel = (props, propName) => {
   if (level < 1 || level > 6) {
     return new Error('Use a heading level 1 - 6')
   }
-  return null 
+  return null
 }
 
-export default function Heading(props) {  
+export default function Heading(props) {
   const { level, children, className } = props;
   const Tag = 'h' + level
-  
-  return(
+  // text-amber-600 text-amber-400
+  return (
     <Tag className={className}>{children}</Tag>
   )
 }
