@@ -5,7 +5,7 @@ import ImageCard from './components/image-card'
 export default function Home() {
   return (
     <div>
-      <Heading level={"1"} className={"text-blue-700"}>hello</Heading>
+      <Heading level={"1"} className={"text-cd-brand text-4xl lg:text-6xl"}>Leading Door and Door Hardware Experts</Heading>
       <ol>
         <ImageCard 
           alt="Sweet little baby white dog being held up by clapping hands."
