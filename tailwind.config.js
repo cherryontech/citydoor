@@ -14,6 +14,9 @@ module.exports = {
       },
       colors: {
         'cd-brand': '#9F1D00'
+      },
+      screens: {
+        'cd-desktop': '1469px'
       }
     },
   },

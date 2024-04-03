@@ -12,14 +12,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
-        
+      <body className={`${inter.className} p-4 cd-desktop:p-0`}>
         <header>
           <Image
-            className="mx-auto"
+            className='mx-auto'
             height={64}
             src={cdLogoHorizontal}
-            alt="CityDoor logo, an abstract line drawing of a cityscape with several buildings and the words City Door & Hardware below it."
+            alt='CityDoor logo, an abstract line drawing of a cityscape with several buildings and the words City Door & Hardware below it.'
           />
         </header>
 
