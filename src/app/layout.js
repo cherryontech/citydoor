@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={`${inter.className} p-4 cd-desktop:p-0`}>
+      <body className={`${inter.className} p-4 cd-desktop:p-0 flex flex-col items-stretch h-screen`}>
         <header className='mb-10 cd-desktop:mb-8'>
           <div className='flex flex-col items-center gap-2 px-4 py-4 mb-10 cd-desktop:gap-6 cd-desktop:px-20 cd-desktop:flex-row bg-cd-tertiary cd-desktop:py-5 cd-desktop:mb-6'>
             <div className='flex items-center gap-1'>
@@ -35,7 +35,9 @@ export default function RootLayout({ children }) {
           />
         </header>
 
-        <main>{children}</main>
+        <main className="grow">{children}</main>
+
+        <footer>FPO future footer</footer>
       </body>
     </html>
   )
