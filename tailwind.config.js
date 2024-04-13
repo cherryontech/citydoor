@@ -21,6 +21,9 @@ module.exports = {
         'cd-secondary': '#90AFC5',
         'cd-white': '#FFFFFF'
       },
+      fontFamily: {
+        sans: ['var(--font-roboto)']
+      },
       screens: {
         'cd-desktop': '1469px'
       }

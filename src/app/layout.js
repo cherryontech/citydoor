@@ -1,12 +1,17 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import Image from 'next/image'
 import cdLogoHorizontal from '/public/cdLogoHorizontal.png'
 import cdLogoSquare from '/public/cdLogoSquare.png'
 import IconPhone from './components/icon-phone'
 import IconEnvelope from './components/icon-envelope'
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({
+  weight: ['400', '500', '700'],
+  display: 'swap',
+  variable: '--font-roboto',
+  subsets: ['latin']
+})
 
 export const metadata = {
   title: 'Citydoor',
@@ -14,8 +19,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
-      <body className={`${inter.className} p-4 cd-desktop:p-0 flex flex-col items-stretch h-screen`}>
+    <html lang='en' className={`${roboto.variable}`}>
+      <body className='flex flex-col items-stretch h-screen p-4 cd-desktop:p-0'>
         <header className='mb-10 cd-desktop:mb-8'>
           <div className='flex flex-col items-center gap-2 px-4 py-4 mb-10 cd-desktop:gap-6 cd-desktop:px-20 cd-desktop:flex-row bg-cd-tertiary cd-desktop:py-5 cd-desktop:mb-6'>
             <div className='flex items-center gap-1'>
