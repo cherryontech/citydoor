@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Image from 'next/image'
 import cdLogoHorizontal from '/public/cdLogoHorizontal.png'
+import cdLogoSquare from '/public/cdLogoSquare.png'
 import IconPhone from './components/icon-phone'
 import IconEnvelope from './components/icon-envelope'
 
@@ -35,9 +36,39 @@ export default function RootLayout({ children }) {
           />
         </header>
 
-        <main className="grow">{children}</main>
+        <main className='grow'>{children}</main>
 
-        <footer>FPO future footer</footer>
+        <footer className='px-3 pt-5 cd-desktop:pt-6 cd-desktop:px-0 bg-cd-accent'>
+          <div className='flex flex-col justify-start gap-5 mb-6 cd-desktop:mb-11 cd-desktop:gap-20 cd-desktop:flex-row'>
+            <Image
+              className='h-12 cd-desktop:h-[88px] object-contain'
+              src={cdLogoSquare}
+              alt='CityDoor logo, the words City Door & Hardware partially surrounded by a thin red square border.'
+            />
+            <address className='flex flex-col gap-3 not-italic text-center cd-desktop:text-left cd-desktop:gap-20 cd-desktop:flex-row'>
+              <p className='flex flex-col'>
+                <span className='font-semibold'>Street Address</span>
+                <span>165 13th St.</span>
+                <span>San Francisco, CA 94103</span>
+                <span>United States</span>
+              </p>
+
+              <p className='flex flex-col'>
+                <span className='font-semibold'>Phone</span>
+                <span>(+1) 415-431-0400</span>
+              </p>
+
+              <p className='flex flex-col'>
+                <span className='font-semibold'>Email</span>
+                <a href='mailto:sales@citydoor.com'>sales@citydoor.com</a>
+              </p>
+            </address>
+          </div>
+
+          <div className='px-3 pb-6 text-center border-t border-cd-black pt-9 cd-desktop:py-3'>
+            <p className='text-sm'>© 2024 City Door. All rights reserved.</p>
+          </div>
+        </footer>
       </body>
     </html>
   )
