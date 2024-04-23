@@ -8,10 +8,10 @@ export default function Form() {
     for (let [key, value] of formData.entries()) {
       body[key] = value
     }
-    fetch("/", {
+    fetch("/hidden-form", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: body
+      body: JSON.stringify(body)
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
