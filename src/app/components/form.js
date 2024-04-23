@@ -8,7 +8,7 @@ export default function Form() {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: { "form-name": "contact", formData }
+      body: { "form-name": "contact-form", formData }
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
@@ -20,7 +20,7 @@ export default function Form() {
     <div className="flex flex-col">
       <Heading level={1} className={"cd-desktop:text-6xl text-4xl mb-6 cd-desktop:mb-4"}>Send Us a Message</Heading>
       <div className="flex flex-col gap-16 sm:gap-y-20 lg:flex-row">
-        <form className="lg:flex-auto" name="contact" onSubmit={handleSubmit}>
+        <form className="lg:flex-auto" name="contact-form" onSubmit={handleSubmit}>
           <div className="flex flex-col gap-x-8 gap-y-6">
             <div>
               <label htmlFor="name" className="block text-sm font-semibold leading-6 text-gray-900">
