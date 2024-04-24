@@ -1,3 +1,4 @@
+'use client'
 import './globals.css'
 import { Roboto } from 'next/font/google'
 import Image from 'next/image'
@@ -13,13 +14,10 @@ const roboto = Roboto({
   subsets: ['latin']
 })
 
-export const metadata = {
-  title: 'Citydoor',
-}
-
 export default function RootLayout({ children }) {
   return (
     <html lang='en' className={`${roboto.variable}`}>
+      <title>Citydoor</title>
       <body className='flex flex-col items-stretch h-screen p-4 cd-desktop:p-0'>
         <header>
           <div className='flex flex-col items-center gap-2 px-4 py-4 mb-10 cd-desktop:gap-6 cd-desktop:px-20 cd-desktop:flex-row bg-cd-tertiary cd-desktop:py-5 cd-desktop:mb-6'>

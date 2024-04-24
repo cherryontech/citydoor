@@ -14,7 +14,7 @@ export default function Form() {
     for (let [key, value] of formData.entries()) {
       body[key] = value
     }
-    fetch("/success", {
+    fetch("/hidden-form", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode(body)
