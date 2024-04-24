@@ -14,7 +14,7 @@ export default function Form() {
     for (let [key, value] of formData.entries()) {
       body[key] = value
     }
-    fetch("/hidden-form", {
+    fetch("/hidden-form.html", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode(body)
@@ -29,7 +29,7 @@ export default function Form() {
     <div className="flex flex-col">
       <Heading level={1} className={"cd-desktop:text-6xl text-4xl mb-6 cd-desktop:mb-4"}>Send Us a Message</Heading>
       <div className="flex flex-col gap-16 sm:gap-y-20 lg:flex-row">
-        <form className="lg:flex-auto" name="contact-form" onSubmit={handleSubmit} data-netlify="true" netlify-honeypot="bot-field">
+        <form className="lg:flex-auto" name="contact-form" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contact-form" />
           <div className="flex flex-col gap-x-8 gap-y-6">
             <div>
