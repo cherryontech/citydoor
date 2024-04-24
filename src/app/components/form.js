@@ -1,5 +1,6 @@
 'use client'
 import Heading from "./heading";
+import { useRouter } from 'next/navigation'
 
 const encode = (data) => {
   return Object.keys(data)
@@ -8,6 +9,8 @@ const encode = (data) => {
 }
 
 export default function Form() {
+  const router = useRouter()
+
   const handleSubmit = (e) => {
     const formData = new FormData(e.target);
     const body = { "form-name": "contact-form" }
@@ -19,7 +22,7 @@ export default function Form() {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode(body)
     })
-      .then(() => alert("Success!"))
+      .then(() => router.push('/success'))
       .catch(error => alert(error));
 
     e.preventDefault();
