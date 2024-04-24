@@ -1,6 +1,12 @@
 'use client'
 import Heading from "./heading";
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 export default function Form() {
   const handleSubmit = (e) => {
     const formData = new FormData(e.target);
@@ -11,7 +17,7 @@ export default function Form() {
     fetch("/hidden-form", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: JSON.stringify(body)
+      body: encode(body)
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
