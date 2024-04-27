@@ -8,21 +8,8 @@
   <body>
     <!-- A little help for the Netlify post-processing bots -->
     <form name="contact-form" netlify hidden>
-      <input type="hidden" name="form-name" value="contact-form" />
       <input type="text" name="name" />
       <input type="email" name="email" />
-      <input type="phone" name="phone" />
-      <fieldset className="inline-flex">
-        <legend className="sr-only">Request to call</legend>
-        <div>
-          <input type="radio" id="yes" name="call" value="yes" />
-          <label htmlFor="yes">Yes</label>
-        </div>
-        <div>
-          <input type="radio" id="no" name="call" value="no" />
-          <label htmlFor="no">No</label>
-        </div>
-      </fieldset>
       <textarea name="message"></textarea>
     </form>
   </body>
