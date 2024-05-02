@@ -35,18 +35,36 @@ export default function Form() {
     <div className="flex flex-col">
       <Heading level={1} className={"cd-desktop:text-6xl text-4xl mb-6 cd-desktop:mb-4"}>Send Us a Message</Heading>
       <div className="flex flex-col gap-16 sm:gap-y-20 lg:flex-row">
+        <span>*Required</span>
         <form
-          name="feedback"
+          name="contact"
           onSubmit={handleFormSubmit}
-          className="text-black flex flex-col gap-3 align-center"
-        >
-          <input type="hidden" name="form-name" value="feedback" />
-          <input name="name" type="text" placeholder="Name" required className="input input-bordered" />
-          <input name="email" type="text" placeholder="Email (optional)" className="input input-bordered" />
-          <input name="message" type="text" placeholder="Message" required className="input input-bordered" />
+          className="text-black flex flex-col gap-3 align-center">
+          <input type="hidden" name="form-name" value="contact" />
+          <label htmlFor="name">Name</label>
+          <input name="name" type="text" placeholder="Your name" required className="" />
+          <label htmlFor="email">Email</label>
+          <input name="email" type="text" placeholder="example@email.com" required className="" />
+          <label htmlFor="Phone">Phone</label>
+          <input name="phone" type="text" placeholder="+1 (XXX) - XXX - XXXX" required className="" />
+          <fieldset>
+            <legend className="sr-only">Select option to be called</legend>
+            <span>Do you want us to call you?<span>*</span></span>
+            <div>
+              <input type="radio" id="yes" name="call" value="yes" />
+              <label htmlFor="yes">Yes</label>
+            </div>
+            <div>
+              <input type="radio" id="no" name="call" value="no" />
+              <label htmlFor="no">No</label>
+            </div>
+          </fieldset>
+          <label htmlFor="message">Message<span>*</span></label>
+          <input name="message" type="text" placeholder="Enter your message here" required className="" />
           <button className="btn btn-primary" type="submit" disabled={status === 'pending'}>
             Submit
           </button>
+          <p>Email us directly at <span>sales@citydoor.com</span></p>
           {status === 'ok' && (
             <div className="alert alert-success">
               <SuccessIcon />
