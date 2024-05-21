@@ -33,9 +33,9 @@ export default function Form() {
 
   return (
     <div className="flex flex-col">
-      <Heading level={1} className={"cd-desktop:text-6xl text-4xl mb-6 cd-desktop:mb-4"}>Send Us a Message</Heading>
-      <div className="flex flex-col gap-16 sm:gap-y-20 lg:flex-row">
-        <span>*Required</span>
+      <Heading level={2} className={"cd-desktop:text-4xl text-4xl mb-6 cd-desktop:mb-4 font-semibold"}>Send Us a Message</Heading>
+      <div className="flex flex-col">
+        <span className='text-right'>*Required</span>
         <form
           name="contact"
           onSubmit={handleFormSubmit}

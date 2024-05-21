@@ -38,22 +38,26 @@ export default function Home() {
           alt='Partial view of double glass doors and a tall window. The doors and window are each framed in white wood with cascading ivy. A small decorative plaque hanging from the door reads Home.'
         />
       </article>
-      <article className='my-[90px] flex flex-col justify-between items-center'>
-        <div className='flex'>
-          <Heading level={1} className={"cd-desktop:text-6xl text-4xl mb-6 cd-desktop:mb-4"}>
+      <article className='my-[90px] flex flex-col cd-desktop:gap-y-6'>
+        <div className='cd-desktop:flex gap-x-20 items-center px-20'>
+          <Heading level={1} className={"cd-desktop:text-6xl text-4xl cd-desktop:py-6 font-bold"}>
             Contact Us
           </Heading>
-          <div className='flex flex-col'>
-            <p>Let’s talk about quotes, consultations, deliveries, feedback , and all things doors and doors hardware.</p>
+          <div className='flex flex-col cd-desktop:py-3.5'>
+            <p>Let’s talk about quotes, consultations, deliveries, feedback,</p>
+            <p>and all things doors and doors hardware.</p>
+            <p>Need additional language assistance? Let us know!</p>
             <p>Our experts are here to help you!</p>
           </div>
         </div>
-        <div className='flex gap-x-20'>
+        <div className='cd-desktop:flex gap-x-20 items-center px-20 py-6'>
           <div className='flex flex-col gap-y-6'>
             <Image src={cdFormImageOne} width={343} alt='' />
             <Image src={cdFormImageTwo} width={343} alt='' />
           </div>
-          <Form />
+          <div className='grow max-w-xl	'>
+            <Form />
+          </div>
         </div>
       </article>
     </>
