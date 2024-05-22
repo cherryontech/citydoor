@@ -35,36 +35,48 @@ export default function Form() {
     <div className="flex flex-col">
       <Heading level={2} className={"cd-desktop:text-4xl text-4xl mb-6 cd-desktop:mb-4 font-semibold"}>Send Us a Message</Heading>
       <div className="flex flex-col">
-        <span className='text-right'>*Required</span>
+        <span className='text-right text-cd-error'>* Required</span>
         <form
-          name="contact"
+          name="contact-form"
           onSubmit={handleFormSubmit}
           className="text-black flex flex-col gap-3 align-center">
-          <input type="hidden" name="form-name" value="contact" />
-          <label htmlFor="name">Name</label>
-          <input name="name" type="text" placeholder="Your name" required className="" />
-          <label htmlFor="email">Email</label>
-          <input name="email" type="text" placeholder="example@email.com" required className="" />
-          <label htmlFor="Phone">Phone</label>
-          <input name="phone" type="text" placeholder="+1 (XXX) - XXX - XXXX" required className="" />
-          <fieldset>
-            <legend className="sr-only">Select option to be called</legend>
-            <span>Do you want us to call you?<span>*</span></span>
-            <div>
-              <input type="radio" id="yes" name="call" value="yes" />
-              <label htmlFor="yes">Yes</label>
+          <input type="hidden" name="form-name" value="contact-form" />
+          <div className="flex flex-col gap-1">
+            <label htmlFor="name" className="block">Name<span className="text-cd-error ml-1">*</span></label>
+            <div className="m-0">
+              <input name="name" type="text" placeholder="Your name" required className="block border-0 rounded w-full py-1.5 px-1 ring-1 ring-inset ring-black placeholder:text-gray-400 leading-6 focus:outline-none" />
             </div>
-            <div>
-              <input type="radio" id="no" name="call" value="no" />
-              <label htmlFor="no">No</label>
+          </div>
+          <div className="flex flex-col gap-1">
+            <label htmlFor="email" className="block">Email<span className="text-cd-error ml-1">*</span></label>
+            <input name="email" type="email" placeholder="example@email.com" required className="block border-0 rounded w-full py-1.5 px-1 ring-1 ring-inset ring-black placeholder:text-gray-400 leading-6 focus:outline-none" />
+          </div>
+          <div className="flex flex-col gap-1">
+            <label htmlFor="Phone" className="block">Phone<span className="text-cd-error ml-1">*</span></label>
+            <input name="phone" type="tel" placeholder="+1 (XXX) - XXX - XXXX" required className="block border-0 rounded w-full py-1.5 px-1 ring-1 ring-inset ring-black placeholder:text-gray-400 leading-6 focus:outline-none" />
+          </div>
+          <fieldset className="flex gap-x-40">
+            <legend className="sr-only">Select option to be called</legend>
+            <div className="block">Do you want us to call you?<span className="text-cd-error ml-1">*</span></div>
+            <div className="flex gap-x-6">
+              <div className="">
+                <input type="radio" id="yes" name="call" value="yes" className="" />
+                <label htmlFor="yes" className="ml-2">Yes</label>
+              </div>
+              <div>
+                <input type="radio" id="no" name="call" value="no" />
+                <label htmlFor="no" className="ml-2">No</label>
+              </div>
             </div>
           </fieldset>
-          <label htmlFor="message">Message<span>*</span></label>
-          <input name="message" type="text" placeholder="Enter your message here" required className="" />
-          <button className="btn btn-primary" type="submit" disabled={status === 'pending'}>
+          <div className="flex flex-col gap-1">
+            <label htmlFor="message" className="block">Message<span className="text-cd-error ml-1">*</span></label>
+            <textarea rows={5} name="message" type="text" placeholder="Enter your message here" required className="block border-0 rounded w-full py-1.5 px-1 ring-1 ring-inset ring-black placeholder:text-gray-400 leading-6 focus:outline-none" />
+          </div>
+          <button className="bg-cd-secondary rounded-lg drop-shadow-lg p-4 font-bold w-72" type="submit" disabled={status === 'pending'}>
             Submit
           </button>
-          <p>Email us directly at <span>sales@citydoor.com</span></p>
+          <p>Email us directly at <a href="mailto:sales@citydoor.com" className="text-cd-primary">sales@citydoor.com</a></p>
           {status === 'ok' && (
             <div className="alert alert-success">
               <SuccessIcon />
