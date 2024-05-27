@@ -32,9 +32,9 @@ export default function Form() {
 
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-y-6">
       <Heading level={2} className={"cd-desktop:text-4xl text-4xl mb-6 cd-desktop:mb-4 font-semibold"}>Send Us a Message</Heading>
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-y-6">
         <span className='text-right text-cd-error'>* Required</span>
         <form
           name="contact-form"

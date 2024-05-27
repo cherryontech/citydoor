@@ -38,7 +38,7 @@ export default function Home() {
           alt='Partial view of double glass doors and a tall window. The doors and window are each framed in white wood with cascading ivy. A small decorative plaque hanging from the door reads Home.'
         />
       </article>
-      <article className='my-[90px] flex flex-col cd-desktop:gap-y-6'>
+      <article className='my-[90px] flex flex-col cd-desktop:basis-1/2'>
         <div className='cd-desktop:flex gap-x-20 items-center px-20'>
           <Heading level={1} className={"cd-desktop:text-6xl text-4xl cd-desktop:py-6 font-bold"}>
             Contact Us
@@ -51,11 +51,11 @@ export default function Home() {
           </div>
         </div>
         <div className='cd-desktop:flex gap-x-20 items-center px-20 py-6'>
-          <div className='flex flex-col gap-y-6'>
-            <Image src={cdFormImageOne} width={343} alt='' />
-            <Image src={cdFormImageTwo} width={343} alt='' />
+          <div className='flex flex-col gap-y-6 cd-desktop:basis-1/2'>
+            <Image src={cdFormImageOne} width={475} alt='' />
+            <Image src={cdFormImageTwo} width={475} alt='' />
           </div>
-          <div className='grow max-w-xl	'>
+          <div className='grow max-w-xl	cd-desktop:basis-1/2'>
             <Form />
           </div>
         </div>
