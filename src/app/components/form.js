@@ -55,10 +55,10 @@ export default function Form() {
             <label htmlFor="Phone" className="block">Phone<span className="text-cd-error ml-1">*</span></label>
             <input name="phone" type="tel" placeholder="+1 (XXX) - XXX - XXXX" required className="block border-0 rounded w-full py-1.5 px-1 ring-1 ring-inset ring-black placeholder:text-gray-400 leading-6 focus:outline-none" />
           </div>
-          <fieldset className="flex gap-x-40">
+          <fieldset className="flex flex-col gap-y-1 cd-desktop:flex-row gap-x-40">
             <legend className="sr-only">Select option to be called</legend>
             <div className="block">Do you want us to call you?<span className="text-cd-error ml-1">*</span></div>
-            <div className="flex gap-x-6">
+            <div className="flex gap-x-6 self-center">
               <div className="">
                 <input type="radio" id="yes" name="call" value="yes" className="" />
                 <label htmlFor="yes" className="ml-2">Yes</label>
@@ -73,7 +73,7 @@ export default function Form() {
             <label htmlFor="message" className="block">Message<span className="text-cd-error ml-1">*</span></label>
             <textarea rows={5} name="message" type="text" placeholder="Enter your message here" required className="block border-0 rounded w-full py-1.5 px-1 ring-1 ring-inset ring-black placeholder:text-gray-400 leading-6 focus:outline-none" />
           </div>
-          <button className="bg-cd-secondary rounded-lg drop-shadow-lg p-4 font-bold w-72" type="submit" disabled={status === 'pending'}>
+          <button className="bg-cd-secondary rounded-lg drop-shadow-lg p-4 font-bold w-full cd-desktop:w-72 self-center cd-desktop:self-auto" type="submit" disabled={status === 'pending'}>
             Submit
           </button>
           <p>Email us directly at <a href="mailto:sales@citydoor.com" className="text-cd-primary">sales@citydoor.com</a></p>
