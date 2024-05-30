@@ -19,7 +19,8 @@ module.exports = {
         'cd-tertiary': '#CCCCCC',
         'cd-primary': '#1E40AF',
         'cd-secondary': '#90AFC5',
-        'cd-white': '#FFFFFF'
+        'cd-white': '#FFFFFF',
+        'cd-error': '#D61F14'
       },
       fontFamily: {
         sans: ['var(--font-roboto)']

@@ -1,0 +1,20 @@
+<html>
+    <head></head>
+    <body>
+        <form name="contact-form" netlify hidden>
+            <input type="hidden" name="form-name" value="contact-form" />
+            <input name="name" type="text" />
+            <input name="email" type="text" />
+            <input name="tel" type="text" />
+            <fieldset>
+              <legend>Select option to be called</legend>
+              <div>Do you want us to call you?<span>*</span></div>
+                <input type="radio" id="yes" name="call" value="yes" />
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="call" value="no" />
+                <label for="no">No</label>
+            </fieldset>
+            <textarea name="message" />
+        </form>
+    </body>
+</html>
