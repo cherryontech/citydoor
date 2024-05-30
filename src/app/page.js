@@ -25,11 +25,12 @@ export default function Home() {
           >
             Leading Door and Door Hardware Experts
           </Heading>
-          <p className='text-xl cd-desktop:text-2xl'>
+          <p className='text-xl cd-desktop:text-2xl mb-6'>
             CityDoor & Hardware has been the authority on commercial and
             residential doors, ADA door operators, and door hardware in the Bay
             Area since 1992. We distribute high-quality products worldwide.
           </p>
+          <a href="tel:+14154310400" className="bg-cd-primary block text-center rounded-lg drop-shadow-lg p-4 font-bold w-56 cd-desktop:w-72 self-center cd-desktop:self-auto text-cd-white">Call Us</a>
         </div>
         <Image
           className='hidden cd-desktop:block'
