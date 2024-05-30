@@ -41,15 +41,27 @@ export default function Home() {
       </article>
       <article className='cd-desktop:my-[90px] flex flex-col cd-desktop:basis-1/2 gap-y-6 cd-desktop:gap-y-0'>
         <Image src={cdFormImageTwo} width={320} alt='' className='mx-auto mb-6 cd-desktop:hidden' />
-        <div className='cd-desktop:flex gap-x-20 items-center cd-desktop:px-20 mx-auto cd-desktop:mx-0 max-w-[320px] cd-desktop:max-w-none mb-6 cd-desktop:mb-0'>
-          <Heading level={1} className={"cd-desktop:text-6xl text-4xl cd-desktop:py-6 font-bold mb-6 cd-desktop:mb-0"}>
+        <div className='flex flex-col gap-x-20 items-center cd-desktop:px-20 mx-auto cd-desktop:mx-0 max-w-[320px] cd-desktop:max-w-none mb-6 cd-desktop:mb-0'>
+          <Heading level={1} className={"cd-desktop:text-6xl text-4xl cd-desktop:py-6 font-bold mb-6 cd-desktop:mb-0 self-start"}>
             Contact Us
           </Heading>
-          <div className='flex flex-col cd-desktop:py-3.5'>
-            <p className='text-xl cd-desktop:text-2xl'>Let’s talk about quotes, consultations, deliveries, feedback,</p>
-            <p className='text-xl cd-desktop:text-2xl mb-4'>and all things doors and doors hardware.</p>
-            <p className='text-xl cd-desktop:text-2xl mb-4'>Need additional language assistance? Let us know!</p>
-            <p className='text-xl cd-desktop:text-2xl'>Our experts are here to help you!</p>
+          <div className='flex flex-col cd-desktop:flex-row gap-y-6'>
+            <div>
+              <div className='flex flex-col cd-desktop:py-3.5'>
+                <p className='text-xl cd-desktop:text-2xl'>Let’s talk about quotes, consultations, deliveries, feedback,</p>
+                <p className='text-xl cd-desktop:text-2xl mb-4'>and all things doors and doors hardware.</p>
+                <p className='text-xl cd-desktop:text-2xl mb-4'>Need additional language assistance? Let us know!</p>
+                <p className='text-xl cd-desktop:text-2xl'>Our experts are here to help you!</p>
+              </div>
+            </div>
+            <div>
+              <iframe 
+                src="https://www.google.com/maps/d/embed?mid=1EJ-TgGjtE1Mv1Rw5d45muPyj-5-tRZU&ehbc=2E312F" 
+                width="640" 
+                height="480"
+                className='w-[288px] h-[396px] cd-desktop:w-[613px] cd-desktop:h-[694px]'>
+              </iframe>
+            </div>
           </div>
         </div>
         <div className='cd-desktop:flex gap-x-20 items-center cd-desktop:px-20 cd-desktop:py-6 mx-auto cd-desktop:mx-0 max-w-[320px] cd-desktop:max-w-none'>
