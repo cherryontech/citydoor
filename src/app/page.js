@@ -4,6 +4,7 @@ import cdBannerMainDesktop from '/public/cdBannerMain-desktop.png'
 import cdFormImageOne from '/public/cdFormImageOne.jpeg'
 import cdFormImageTwo from '/public/cdFormImageTwo.jpeg'
 import Form from './components/form'
+import KeyBrands from './components/key-brands'
 import Image from 'next/image'
 
 export default function Home() {
@@ -39,6 +40,7 @@ export default function Home() {
           alt='Partial view of double glass doors and a tall window. The doors and window are each framed in white wood with cascading ivy. A small decorative plaque hanging from the door reads Home.'
         />
       </article>
+      <KeyBrands/>
       <article className='cd-desktop:my-[90px] flex flex-col cd-desktop:basis-1/2 gap-y-6 cd-desktop:gap-y-0'>
         <Image src={cdFormImageTwo} width={320} alt='' className='mx-auto mb-6 cd-desktop:hidden' />
         <div className='flex flex-col gap-x-20 items-center mx-auto cd-desktop:mx-0 max-w-[320px] cd-desktop:max-w-none mb-6 cd-desktop:mb-0 cd-desktop:px-20 cd-desktop:py-6'>
