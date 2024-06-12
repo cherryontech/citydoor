@@ -43,7 +43,7 @@ export default function Home() {
       <KeyBrands/>
       <article className='cd-desktop:my-[90px] flex flex-col cd-desktop:basis-1/2 gap-y-6 cd-desktop:gap-y-0'>
         <Image src={cdFormImageTwo} width={320} alt='' className='mx-auto mb-6 cd-desktop:hidden' />
-        <div className='flex flex-col gap-x-20 items-center mx-auto cd-desktop:mx-0 max-w-[320px] cd-desktop:max-w-none mb-6 cd-desktop:mb-0 cd-desktop:px-20 cd-desktop:py-6'>
+        <div className='flex flex-col gap-x-20 items-center mx-auto cd-desktop:mx-0 max-w-[320px] cd-desktop:max-w-none mb-6 cd-desktop:mb-0 cd-desktop:py-6'>
           <Heading level={1} className={"cd-desktop:text-6xl text-4xl cd-desktop:py-6 font-bold mb-6 cd-desktop:mb-0 self-start"}>
             Contact Us
           </Heading>
@@ -90,7 +90,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='cd-desktop:flex gap-x-20 items-center cd-desktop:px-20 cd-desktop:py-6 mx-auto cd-desktop:mx-0 max-w-[320px] cd-desktop:max-w-none'>
+        <div className='cd-desktop:flex gap-x-20 items-center cd-desktop:py-6 mx-auto cd-desktop:mx-0 max-w-[320px] cd-desktop:max-w-none'>
           <div className='flex flex-col gap-y-6 cd-desktop:basis-1/2'>
             <Image src={cdFormImageOne} width={475} alt='' className='hidden cd-desktop:block'/>
             <Image src={cdFormImageTwo} width={475} alt='' className='hidden cd-desktop:block'/>
